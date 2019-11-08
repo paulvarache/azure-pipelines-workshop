@@ -12,3 +12,6 @@ steps:
 
 - script: yarn build:native
   workingDirectory: electron
+
+- script: yarn dist
+  workingDirectory: electron
