@@ -15,3 +15,9 @@ steps:
 
 - script: yarn dist
   workingDirectory: electron
+
+- task: PublishPipelineArtifact@1
+  inputs:
+    targetPath: '$(System.DefaultWorkingDirectory)/dist'
+    artifact: 'app'
+    publishLocation: 'pipeline'
