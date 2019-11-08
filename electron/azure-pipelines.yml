@@ -6,10 +6,13 @@ pool:
 steps:
 
 - script: yarn
+  workingDirectory: electron
   displayName: 'Get dependencies'
 
 - script: yarn build:native
+  workingDirectory: electron
   displayName: 'Build native module'
 
 - script: yarn dist
+  workingDirectory: electron
   displayName: 'Build app'
