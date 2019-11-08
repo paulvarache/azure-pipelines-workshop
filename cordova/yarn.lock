@@ -571,6 +571,14 @@ cordova-app-hello-world@^4.0.0:
   resolved "https://registry.yarnpkg.com/cordova-app-hello-world/-/cordova-app-hello-world-4.0.0.tgz#a30e896b210787332337069c50845e1802dabcff"
   integrity sha512-hTNYHUJT5YyMa1cQQE1naGyU6Eh5D5Jl33sMnCh3+q15ZwWTL/TOy3k8+mUvjTp8bwhO5eECGKULYoVO+fp9ZA==
 
+cordova-build-increment@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/cordova-build-increment/-/cordova-build-increment-0.1.0.tgz#8563ce85f76d793bddfe38774950f978e1c5114c"
+  integrity sha1-hWPOhfdteTvd/jh3SVD5eOHFEUw=
+  dependencies:
+    xml-writer "^1.6.0"
+    xml2js "^0.4.10"
+
 cordova-common@^3.1.0:
   version "3.2.1"
   resolved "https://registry.yarnpkg.com/cordova-common/-/cordova-common-3.2.1.tgz#f4fdbeb40d9049fe28a09fa901756ed66d246661"
@@ -3468,7 +3476,12 @@ xml-parse-from-string@^1.0.0:
   resolved "https://registry.yarnpkg.com/xml-parse-from-string/-/xml-parse-from-string-1.0.1.tgz#a9029e929d3dbcded169f3c6e28238d95a5d5a28"
   integrity sha1-qQKekp09vN7RafPG4oI42VpdWig=
 
-xml2js@^0.4.5:
+xml-writer@^1.6.0:
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/xml-writer/-/xml-writer-1.7.0.tgz#b76f1d591c16a2634ebdb703c7bdbd0fd6819065"
+  integrity sha1-t28dWRwWomNOvbcDx729D9aBkGU=
+
+xml2js@^0.4.10, xml2js@^0.4.5:
   version "0.4.22"
   resolved "https://registry.yarnpkg.com/xml2js/-/xml2js-0.4.22.tgz#4fa2d846ec803237de86f30aa9b5f70b6600de02"
   integrity sha512-MWTbxAQqclRSTnehWWe5nMKzI3VmJ8ltiJEco8akcC6j3miOhjjfzKum5sId+CWhfxdOs/1xauYr8/ZDBtQiRw==
