@@ -35,6 +35,6 @@ steps:
   workingDirectory: cordova
   displayName: 'Build app'
 
-- script: FASTLANE_PASSWORD=$(FASTLANE_PASSWORD) fastlane pilot upload --ipa *.ipa
+- script: FASTLANE_PASSWORD=$(FASTLANE_PASSWORD) fastlane pilot upload --ipa *.ipa --skip_waiting_for_build_processing=true
   workingDirectory: cordova/platforms/ios/build/device
   displayName: 'Publish app'
