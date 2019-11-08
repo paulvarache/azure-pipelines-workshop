@@ -6,6 +6,11 @@ pool:
 steps:
 
 - task: UseNode@1
+- task: UsePythonVersion@0
+  inputs:
+    versionSpec: '2.x'
+    addToPath: true
+    architecture: 'x64'
 
 - script: yarn
   workingDirectory: electron
