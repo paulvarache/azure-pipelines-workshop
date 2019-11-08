@@ -18,6 +18,6 @@ steps:
 
 - task: PublishPipelineArtifact@1
   inputs:
-    targetPath: '$(System.DefaultWorkingDirectory)/dist'
+    targetPath: '$(System.DefaultWorkingDirectory)/electron/dist'
     artifact: 'app'
     publishLocation: 'pipeline'
