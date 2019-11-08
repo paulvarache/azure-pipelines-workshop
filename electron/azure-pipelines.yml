@@ -1,3 +1,15 @@
 trigger: none
 
+pool:
+  vmImage: 'macOS-10.14'
 
+steps:
+
+- script: yarn
+  displayName: 'Get dependencies'
+
+- script: yarn build:native
+  displayName: 'Build native module'
+
+- script: yarn dist
+  displayName: 'Build app'
