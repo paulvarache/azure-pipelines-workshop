@@ -1,0 +1,9 @@
+trigger: none
+
+pool:
+  vmImage: 'macOS-10.14'
+
+steps:
+- script: yarn
+  workingDirectory: electron
+  displayName: 'Get deps'
