@@ -12,6 +12,17 @@ steps:
     addToPath: true
     architecture: 'x64'
 
+- task: InstallAppleCertificate@2
+  inputs:
+    certSecureFile: 'GlobFinder cert.p12'
+    certPwd: $(p12Password)
+    keychain: 'temp'
+
+- task: InstallAppleProvisioningProfile@1
+  inputs:
+    provisioningProfileLocation: 'secureFiles'
+    provProfileSecureFile: 'Glob_Finder_Distribution.mobileprovision'
+
 - script: yarn
   workingDirectory: cordova
   displayName: 'Get dependencies'
@@ -20,6 +31,6 @@ steps:
   workingDirectory: cordova
   displayName: 'Fetch platforms and plugins'
 
-- script: yarn cordova build ios --release
+- script: yarn cordova build ios --release --device --codeSignIdentity="iPhone Developer" --developmentTeam=YWCQ65XXP9 --packageType=app-store --provisioningProfile$(APPLE_PROV_PROFILE_UUID) --automaticProvisioning=false
   workingDirectory: cordova
   displayName: 'Build app'
