@@ -31,6 +31,6 @@ steps:
   workingDirectory: cordova
   displayName: 'Fetch platforms and plugins'
 
-- script: yarn cordova build ios --release --codeSignIdentity="iPhone Developer" --developmentTeam=YWCQ65XXP9 --packageType=app-store --provisioningProfile$(APPLE_PROV_PROFILE_UUID) --automaticProvisioning=false
+- script: yarn cordova build ios --release --codeSignIdentity="iPhone Developer" --developmentTeam=YWCQ65XXP9 --packageType=app-store --provisioningProfile=$(APPLE_PROV_PROFILE_UUID) --automaticProvisioning=false
   workingDirectory: cordova
   displayName: 'Build app'
