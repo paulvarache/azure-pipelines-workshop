@@ -34,3 +34,7 @@ steps:
 - script: yarn cordova build ios --release --device --codeSignIdentity="$(APPLE_CERTIFICATE_SIGNING_IDENTITY)" --developmentTeam=YWCQ65XXP9 --packageType=app-store --provisioningProfile=$(APPLE_PROV_PROFILE_UUID) --automaticProvisioning=false
   workingDirectory: cordova
   displayName: 'Build app'
+
+- script: fastlane upload *.ipa
+  workingDirectory: cordova/platforms/ios/build/device
+  displayName: 'Publish app'
