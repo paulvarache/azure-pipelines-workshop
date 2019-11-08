@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "start": "electron .",
-    "build:native": "node-gyp configure --runtime=electron && node-gyp build --runtime=electron",
+    "build:native": "node-gyp configure --target=7.1.1 --arch=x64 --dist-url=https://electronjs.org/headers --runtime=electron && node-gyp build --target=7.1.1 --arch=x64 --dist-url=https://electronjs.org/headers --runtime=electron",
     "dist": "yarn build:icon && electron-builder --macos",
     "build:icon": "png2icons assets/icon.png assets/icon -icns"
   },
