@@ -6,7 +6,7 @@
   "scripts": {
     "start": "electron .",
     "build:native": "node-gyp configure && node-gyp build",
-    "dist": "electron-builder --macos",
+    "dist": "yarn build:icon && electron-builder --macos",
     "build:icon": "png2icons assets/icon.png assets/icon -icns"
   },
   "build": {
