@@ -1,0 +1,25 @@
+trigger: none
+
+pool:
+  vmImage: 'macOS-10.14'
+
+steps:
+
+- task: UseNode@1
+- task: UsePythonVersion@0
+  inputs:
+    versionSpec: '2.x'
+    addToPath: true
+    architecture: 'x64'
+
+- script: yarn
+  workingDirectory: cordova
+  displayName: 'Get dependencies'
+
+- script: yarn cordova prepare
+  workingDirectory: cordova
+  displayName: 'Fetch platforms and plugins'
+
+- script: yarn cordova build ios --release
+  workingDirectory: cordova
+  displayName: 'Build app'
