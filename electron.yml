@@ -5,6 +5,10 @@ pool:
 
 steps:
 - task: UseNode@1
+
 - script: yarn
   workingDirectory: electron
   displayName: 'Get deps'
+
+- script: yarn build:native
+  workingDirectory: electron
