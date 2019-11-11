@@ -16,7 +16,7 @@ steps:
     npmTokenSecureFile: 'npmToken'
 - script: |
     echo $(npm_config_registry)
-    echo $npm_config_registry
+    env
   displayName: 'Run a one-line script'
 
 
